@@ -1,0 +1,156 @@
+/* .navbar {
+    background-color: #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  .nav-link {
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #ffcc00;
+  }
+  
+  .navbar-logo {
+    font-size: 24px;
+    font-weight: 700;
+  }
+   */
+
+   /* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+  }
+  
+  .navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: 0 15px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .signup {
+    background-color: #ffcc00;
+    color: #003366;
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  
+  .nav-auth {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #004080;
+  }
+   */
+
+/* Navbar.css */
+
+/* Navbar.css */
+
+.custom-navbar {
+  box-shadow: 0px 4px 10px hsl(239, 77%, 63%);
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: hwb(0 100% 0%);
+  text-decoration: none;
+  margin-right: auto; /* Ensures the logo is aligned to the left */
+}
+
+.navbar-nav .nav-link {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.signup-link {
+  background-color: #ffcc00;
+  color: #003366 !important;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 20px;
+}
+
+.signup-link:hover {
+  background-color: #e6b800;
+  color: white !important;
+}
+
+.navbar-nav .dropdown-menu {
+  background-color: #003366;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px hsl(216, 96%, 68%);
+}
+
+.navbar-nav .dropdown-item {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #ffcc00;
+  color: #003366;
+}
+
