@@ -433,7 +433,7 @@
   
   
   .about-section {
-    background: #fff;
+    background: hwb(138 77% 5%);
     color: #333;
     padding: 20px;
     margin: 50px 50px;
@@ -468,7 +468,7 @@
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #00c853;
+    background-color: #000000;
     color: white;
     text-decoration: none;
     border-radius: 4px;
