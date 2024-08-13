@@ -34,7 +34,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import TestPage from './components/TestPage';
 import ThankYouPage from './components/ThankYouPage';
-import PricingPage from './components/PricingPage';
+import MembershipPlans from './components/MembershipPlans';
 
 function App() {
   return (
@@ -47,7 +47,7 @@ function App() {
         <Route path="/mocks" element={<Mocks />} />
         <Route path="/test/:testId" element={<TestPage />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/membership-plans" element={<MembershipPlans />} />
       </Routes>
     </div>
   );
