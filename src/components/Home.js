@@ -54,27 +54,6 @@ const Home = () => {
       </div>
       <TestSeriesSection />
 
-      <div className="about-section">
-        <div className="about-header">ABOUT STS</div>
-        <div className="about-content">
-          <p>
-            At STS, we bridge the gap between education and employment by offering hands-on, on-the-job experience.
-            Whether you're a student, a recent graduate, or someone looking to pivot careers, our platform connects
-            you with industry leaders ready to mentor and guide you.
-          </p>
-          <p>
-            Take the first step toward your dream career by gaining the skills and experience that employers value most.
-            Start your journey today!
-          </p>
-        </div>
-        <a href="https://saanvitechs.com/about.php" target="_blank" rel="noopener noreferrer" className="read-more-btn">Read More</a>
-      </div>
-
-      <ProgramSection />
-
-      
-      
-
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }} className="statistics-section">
         <div className="stat-card">
           <FontAwesomeIcon icon={faUserShield} className="stat-icon" />
@@ -105,6 +84,27 @@ const Home = () => {
           </div>
         </div>
       </motion.div>
+      <ProgramSection />
+      <div className="about-section">
+        <div className="about-header">ABOUT STS</div>
+        <div className="about-content">
+          <p>
+            At STS, we bridge the gap between education and employment by offering hands-on, on-the-job experience.
+            Whether you're a student, a recent graduate, or someone looking to pivot careers, our platform connects
+            you with industry leaders ready to mentor and guide you.
+          </p>
+          <p>
+            Take the first step toward your dream career by gaining the skills and experience that employers value most.
+            Start your journey today!
+          </p>
+        </div>
+        <a href="https://saanvitechs.com/about.php" target="_blank" rel="noopener noreferrer" className="read-more-btn">Read More</a>
+      </div>
+
+      
+      
+
+      
       <Footer />
       </div>
       

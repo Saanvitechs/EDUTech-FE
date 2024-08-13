@@ -487,7 +487,8 @@
     border-radius: 12px;
     margin-bottom: 40px;
     width: 80%;
-    margin: 0 auto;
+    margin: 50px auto;
+    align-items: center;
   }
   
   .stat-card {
