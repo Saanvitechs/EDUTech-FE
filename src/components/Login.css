@@ -1,119 +1,4 @@
-/* .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .login-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .login-form h2 {
-    margin-bottom: 20px;
-  }
-  
-  .input-group {
-    margin-bottom: 15px;
-  }
-  
-  .input-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-   */
-
-   /* .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
-  }
-  
-  .login-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    max-width: 400px;
-    text-align: left;
-  }
-  
-  .login-form h2 {
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 24px;
-    font-weight: 700;
-  }
-  
-  .input-group {
-    margin-bottom: 20px;
-  }
-  
-  .input-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #555;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-  }
-  
-  .btn {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #5a67d8;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #4c51bf;
-  }
-  
-   */
-
-
-   .login-page {
+   /* .login-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,4 +147,49 @@
   .apple-btn:hover {
     background-color: #333;
   }
-  
+   */
+
+
+   /* Container Styles */
+.MuiGrid-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card Styles */
+.MuiCard-root {
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+/* Typography Styles */
+.MuiTypography-h4 {
+  font-weight: bold;
+  color: #1565C0;
+}
+
+.MuiTypography-body2 {
+  color: #1565C0;
+}
+
+/* TextField Styles */
+.MuiTextField-root {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.MuiButton-root {
+  background-color: #1565C0;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.MuiButton-root:hover {
+  background-color: #0D47A1;
+}
