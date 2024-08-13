@@ -20,9 +20,9 @@ const CustomNavbar = () => {
             </NavDropdown>
             <NavDropdown title="Test your prep" id="test-prep-dropdown">
               {/* Direct links to test pages without authentication check */}
-              <NavDropdown.Item as={Link} to="/test1">Test 1</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/test2">Test 2</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/test3">Test 3</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/test/1">Test 1</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/test/2">Test 2</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/test/3">Test 3</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/pricing">Pricing</Nav.Link>
             <Nav.Link as={Link} to="/resources">Resources</Nav.Link>

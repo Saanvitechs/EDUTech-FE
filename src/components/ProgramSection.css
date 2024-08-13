@@ -139,6 +139,7 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
   }
   
   .content-card {
@@ -162,13 +163,15 @@
   
   .content-details {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    justify-content: space-around;
     width: 100%;
   }
   
   .content-details ul {
     list-style: none;
     padding: 0;
+    
   }
   
   .content-details ul li {
@@ -181,10 +184,12 @@
   .content-details ul li span {
     font-weight: bold;
     margin-right: 8px;
+    
   }
   
   .image-container {
-    width: 30%;
+    width: 20%;
+   
   }
   
   .image-container img {

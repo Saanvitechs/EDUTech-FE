@@ -52,6 +52,7 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
+      <TestSeriesSection />
 
       <div className="about-section">
         <div className="about-header">ABOUT STS</div>
@@ -71,7 +72,7 @@ const Home = () => {
 
       <ProgramSection />
 
-      <TestSeriesSection />
+      
       
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }} className="statistics-section">

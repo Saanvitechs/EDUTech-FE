@@ -73,6 +73,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './ProgramSection.css';
+import pre from './images/pre.svg';
+import pro from './images/project.svg';
+import mentor from './images/mentor.svg';
 
 const ProgramDetails = () => {
   const [activeTab, setActiveTab] = useState('pre-graduation');
@@ -114,7 +117,7 @@ const ProgramDetails = () => {
         {activeTab === 'pre-graduation' && (
           <div className="content-card">
             <h2>#PreGraduation</h2>
-            <p className="powered-by">Powered by IBM, Microsoft, Meta</p>
+            <p className="powered-by">Powered by STS</p>
             <p className="description">
               Advanced Certification Program, backed by industry giants to become a Globally Certified Professional.
             </p>
@@ -127,7 +130,7 @@ const ProgramDetails = () => {
                 <li><span>Early Career Opportunities</span></li>
               </ul>
               <div className="image-container">
-                <img src="/path-to-your-image1.jpg" alt="PreGraduation" />
+                <img src={pre} alt="PreGraduation" />
               </div>
             </div>
           </div>
@@ -148,7 +151,7 @@ const ProgramDetails = () => {
                 <li><span>Expert Mentorship</span></li>
               </ul>
               <div className="image-container">
-                <img src="/path-to-your-image2.jpg" alt="Mentorship" />
+                <img src={pro} alt="Mentorship" />
               </div>
             </div>
           </div>
@@ -169,7 +172,7 @@ const ProgramDetails = () => {
                 <li><span>Job-Ready Portfolio</span></li>
               </ul>
               <div className="image-container">
-                <img src="/path-to-your-image3.jpg" alt="Projects" />
+                <img src={mentor} alt="Projects" />
               </div>
             </div>
           </div>

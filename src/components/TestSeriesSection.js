@@ -27,7 +27,7 @@ const TestSeriesSection = () => {
             <p><strong>Mock Tests</strong></p>
           </li>
         </ul>
-        <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="explore-btn">
+        <a href="/mocks" className="explore-btn">
           Explore More
         </a>
       </div>
