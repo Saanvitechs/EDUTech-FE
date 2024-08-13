@@ -1,20 +1,3 @@
-// const calculateScore = (questions, answers) => {
-//     let score = 0;
-//     questions.forEach((question) => {
-//       if (answers[question.id] === question.correctAnswer) {
-//         score += 1;
-//       }
-//     });
-//     return score;
-//   };
-  
-//   const testService = {
-//     calculateScore,
-//   };
-  
-//   export default testService;
-  
-
 const getQuestions = async () => {
     // Fetch questions from API or mock data
     return [
