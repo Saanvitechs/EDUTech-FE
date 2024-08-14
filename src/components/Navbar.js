@@ -24,7 +24,7 @@ const CustomNavbar = () => {
               <NavDropdown.Item as={Link} to="/test/2">Test 2</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/test/3">Test 3</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/pricing">Pricing</Nav.Link>
+            <Nav.Link as={Link} to="/membership-plans">Pricing</Nav.Link>
             <Nav.Link as={Link} to="/resources">Resources</Nav.Link>
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
             <Nav.Link as={Link} to="/register" className="signup-link">Sign up</Nav.Link>

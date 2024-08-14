@@ -53,7 +53,7 @@ const Register = () => {
     <Grid container justifyContent="flex-end" alignItems="center" style={{ height: '100vh', backgroundImage: `url(${require('./images/signup.svg').default})`, backgroundSize: 'cover', paddingRight: '50px' }}>
       <Grid item xs={12} sm={8} md={4}>
         <Card raised style={{ padding: '40px', borderRadius: '20px', backgroundColor: 'white', textAlign: 'center' }}>
-          <Typography variant="h4" gutterBottom style={{ fontWeight: 'bold', color: '#b71c1c' }}>
+          <Typography variant="h4" gutterBottom style={{ fontWeight: 'bold' }}>
             Create New Account
           </Typography>
           <form onSubmit={handleSubmit}>
@@ -143,13 +143,13 @@ const Register = () => {
               type="submit"
               fullWidth
               variant="contained"
-              style={{ backgroundColor: '#b71c1c', color: '#fff', borderRadius: '30px', padding: '10px' }}
+              style={{ borderRadius: '30px', padding: '10px' }}
             >
               Sign Up
             </Button>
           </form>
-          <Typography variant="body2" style={{ marginTop: '20px', color: '#b71c1c' }}>
-            Already Registered? <a href="/login" style={{ color: '#b71c1c', textDecoration: 'none' }}>Login</a>
+          <Typography variant="body2" style={{ marginTop: '20px', color: '#212429' }}>
+            Already Registered? <a href="/login" style={{  textDecoration: 'none' }}>Login</a>
           </Typography>
         </Card>
       </Grid>
