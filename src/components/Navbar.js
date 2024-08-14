@@ -104,16 +104,33 @@
 // export default CustomNavbar;
 
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
-const CustomNavbar = ({ isAuthenticated, onLogout }) => {
+// const CustomNavbar = ({ isAuthenticated, onLogout }) => {
+//   const navigate = useNavigate();
+
+//   const handleLogoutClick = () => {
+//     onLogout();
+//     navigate('/login');
+//   };
+
+const CustomNavbar = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogoutClick = () => {
-    onLogout();
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsAuthenticated(false);
     navigate('/login');
   };
 
@@ -140,7 +157,7 @@ const CustomNavbar = ({ isAuthenticated, onLogout }) => {
             <Nav.Link as={Link} to="/resources">Resources</Nav.Link>
             {isAuthenticated ? (
               <>
-                <Nav.Link onClick={handleLogoutClick}>Logout</Nav.Link>
+                <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
               </>
             ) : (
               <>

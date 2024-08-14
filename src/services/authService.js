@@ -27,7 +27,7 @@
 
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/auth/';
+const API_URL = 'http://localhost:8080/api/auth';
 
 const register = async (firstName, lastName, username, email, password) => {
   try {
@@ -47,14 +47,14 @@ const register = async (firstName, lastName, username, email, password) => {
 
 const login = async (username, password) => {
   try {
-    const response = await axios.post('${API_URL}/login', { username, password });
-    if (response.data?.token) {
-      localStorage.setItem('jwtToken', response.data.token); // Store token in local storage
+    const response = await axios.post(`${API_URL}/login`, { username, password });
+    if (response.data.token) {
+      localStorage.setItem('token', response.data.token); // Store token in local storage
     }
     return response.data;
   } catch (error) {
-    throw new Error(error.response?.data?.message || 'An error occurred');
-  }
+    console.error('Login failed:', error);
+    throw error;  }
 };
 
 

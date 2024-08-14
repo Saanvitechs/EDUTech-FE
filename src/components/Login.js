@@ -167,7 +167,7 @@ const Login = ({ setIsAuthenticated }) => {
     try {
       // Call the login function from the authService
       await authService.login(username, password);
-      setIsAuthenticated(true);
+      // setIsAuthenticated(true);
       navigate('/'); // Redirect to the homepage after successful login
     } catch (err) {
       setError('Invalid username or password. Please try again.');
