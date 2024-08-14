@@ -72,10 +72,11 @@
 
 // export default Login;
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { TextField, Button, Card, Typography, Grid, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import { AuthContext } from '../hooks/AuthContext';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -83,13 +84,18 @@ const Login = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  const { login } = useContext(AuthContext);
+
   const handleLogin = (e) => {
     e.preventDefault();
 
     // Simple authentication logic (replace with actual logic)
-    if (username === 'testuser' && password === 'password123') {
+    if (username !== '' && password !== '') {
+      localStorage.setItem('name', username);
+
       setError(''); // Clear any existing errors
-      navigate('/home'); // Redirect to the homepage after successful login
+      login();
+      navigate('/'); // Redirect to the homepage after successful login
     } else {
       setError('Invalid username or password. Please try again.'); // Set an error message
     }

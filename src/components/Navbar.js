@@ -48,7 +48,7 @@ import './Navbar.css';
 const CustomNavbar = () => {
   const { isAuthenticated, logout } = useContext(AuthContext);
   const navigate = useNavigate();
-
+  const username = localStorage.getItem('name');
   const handleLogout = () => {
     logout();
     navigate('/login');
@@ -82,6 +82,8 @@ const CustomNavbar = () => {
                 id="profile-dropdown"
                 alignRight
               >
+                <NavDropdown.Item as={Link} to="">{username}</NavDropdown.Item>
+                <NavDropdown.Divider />
                 <NavDropdown.Item as={Link} to="/profile">View Profile</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
