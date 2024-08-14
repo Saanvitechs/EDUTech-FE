@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #fafafa;
   }
   
@@ -18,5 +18,38 @@ body {
   
   button:hover {
     transform: translateY(-2px);
+  }
+   */
+
+   body {
+    background-color: #fafafa;
+  }
+  
+  h4 {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  button {
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* New styles for the Card hover effect */
+  .cardHoverEffect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cardHoverEffect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   }
   

@@ -33,7 +33,7 @@ const MembershipPlans = () => {
   ];
 
   return (
-    <Container maxWidth="md" style={{ marginTop: '150px' }}>
+    <Container maxWidth="md" style={{ marginTop: '70px' }}>
       <Typography
         variant="h4"
         align="center"
