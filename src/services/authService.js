@@ -47,19 +47,16 @@ const register = async (firstName, lastName, username, email, password) => {
 
 const login = async (username, password) => {
   try {
-    const response = await axios.post(API_URL + 'login', {
-      username,
-      password,
-    });
-    if (response.data.token) {
-      localStorage.setItem('user', JSON.stringify(response.data));
+    const response = await axios.post('${API_URL}/login', { username, password });
+    if (response.data?.token) {
+      localStorage.setItem('jwtToken', response.data.token); // Store token in local storage
     }
     return response.data;
   } catch (error) {
-    console.error('Login failed:', error);
-    throw error;
+    throw new Error(error.response?.data?.message || 'An error occurred');
   }
 };
+
 
 const logout = () => {
   localStorage.removeItem('user');
