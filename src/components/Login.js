@@ -149,7 +149,7 @@ import { useNavigate } from 'react-router-dom';
 import authService from '../services/authService';
 import './Login.css';
 
-const Login = () => {
+const Login = ({ setIsAuthenticated }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -167,6 +167,7 @@ const Login = () => {
     try {
       // Call the login function from the authService
       await authService.login(username, password);
+      setIsAuthenticated(true);
       navigate('/'); // Redirect to the homepage after successful login
     } catch (err) {
       setError('Invalid username or password. Please try again.');
