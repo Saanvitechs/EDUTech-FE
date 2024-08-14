@@ -253,8 +253,8 @@ const Login = () => {
               </a>
             </Typography>
             <Typography variant="body2" style={{ color: '#1565C0' }}>
-              <a href="https://saanvitechs.com/contact.php" style={{ color: '#1565C0', textDecoration: 'none' }}>
-                Need Help?
+              <a href="/forgot-password" style={{ color: '#1565C0', textDecoration: 'none' }}>
+                Forgot Password?
               </a>
             </Typography>
           </Box>

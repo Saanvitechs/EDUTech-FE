@@ -41,6 +41,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import MembershipPlans from './components/MembershipPlans';
 import TestPage from './components/TestPage';
+import ForgotPassword from './components/ForgotPassword';
 import authService from './services/authService';
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/mocks" element={<Mocks />} />
         <Route path="/membership-plans" element={<MembershipPlans />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/test/:id" element={<PrivateRoute component={TestPage} />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
