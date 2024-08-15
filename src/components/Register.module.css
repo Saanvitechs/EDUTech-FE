@@ -216,7 +216,7 @@
 }
 
 .register-form .title {
-  color: #b71c1c;
+  color: #5254e9;
   font-size: 24px;
   font-weight: 700;
 }
@@ -227,12 +227,12 @@
 }
 
 .register-form .btn {
-  background-color: #b71c1c;
-  color: white;
+  background-color: #4a7cf2;
+  color: rgb(17, 24, 235);
   border-radius: 30px;
   padding: 10px;
 }
 
 .register-form .btn:hover {
-  background-color: #a30000;
+  background-color: #3737f4;
 }
