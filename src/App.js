@@ -1,58 +1,3 @@
-// export default App;
-
-
-// import React, { useState, useEffect } from 'react';
-// import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-// import Home from './components/Home';
-// import Mocks from './components/Mocks';
-// import Navbar from './components/Navbar';
-// import Login from './components/Login';
-// import Register from './components/Register';
-// import MembershipPlans from './components/MembershipPlans';
-// import TestPage from './components/TestPage';
-// import authService from './services/authService';
-
-// function App() {
-//   const [isAuthenticated, setIsAuthenticated] = useState(false);
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-//     const user = authService.getCurrentUser();
-//     if (user) {
-//       setIsAuthenticated(true);
-//     }
-//   }, []);
-
-//   const handleLogout = () => {
-//     authService.logout();
-//     setIsAuthenticated(false);
-//     navigate('/login');
-//   };
-
-//   return (
-//     <div className="App">
-//       <Navbar isAuthenticated={isAuthenticated} onLogout={handleLogout} />
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-//         <Route path="/register" element={<Register />} />
-//         <Route path="/mocks" element={<Mocks />} />
-//         <Route path="/membership-plans" element={<MembershipPlans />} />
-//         <Route path="/test/:id" element={<PrivateRoute component={TestPage} />} />
-//         <Route path="*" element={<Navigate to="/" />} />
-//       </Routes>
-//     </div>
-//   );
-// }
-
-// function PrivateRoute({ component: Component, ...rest }) {
-//   const user = authService.getCurrentUser();
-//   return user ? <Component {...rest} /> : <Navigate to="/login" replace />;
-// }
-
-// export default App;
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -80,14 +25,14 @@ function App() {
           <Route path="/register" element={<Register />} />
 
           {/* Protect these routes */}
-          <Route 
+          {/* <Route 
             path="/mocks" 
             element={
               <ProtectedRoute>
                 <Mocks />
               </ProtectedRoute>
             } 
-          />
+          /> */}
           <Route 
             path="/test/:testId" 
             element={
@@ -99,7 +44,7 @@ function App() {
 
 
 
-          {/* <Route path="/mocks" element={<Mocks />} /> */}
+          <Route path="/mocks" element={<Mocks />} />
 
           <Route path="/test/:testId" element={<TestPage />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
