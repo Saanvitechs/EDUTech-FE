@@ -46,6 +46,7 @@ import TestPage from './components/TestPage';
 import ThankYouPage from './components/ThankYouPage';
 import MembershipPlans from './components/MembershipPlans';
 import ForgotPassword from './components/ForgotPassword';
+import MyProfile from './components/MyProfile'; // Import the MyProfile component
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/membership-plans" element={<MembershipPlans />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/my-profile" element={<MyProfile />} />
         </Routes>
       </div>
     </AuthProvider>

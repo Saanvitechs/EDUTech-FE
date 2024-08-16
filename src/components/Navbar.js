@@ -84,7 +84,7 @@ const CustomNavbar = () => {
               >
                 <NavDropdown.Item as={Link} to="">{username}</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={Link} to="/profile">View Profile</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/my-profile">View Profile</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
               </NavDropdown>
