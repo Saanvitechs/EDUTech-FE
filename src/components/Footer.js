@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Company</h4>
           <ul>
-            <li><a href="https://saanvitechs.com/">About Us</a></li>
+            <li><a href="https://saanvitechs.com/about.php">About Us</a></li>
             <li><a href="https://careers.saanvitechs.com/">Careers</a></li>
             <li><a href="https://www.instagram.com/saanvitechs?utm_source=qr&igsh=MXEydGlrNnQ3Mm1xaQ==">Media</a></li>
             <li><a href="/sitemap">Sitemap</a></li>
@@ -33,11 +33,13 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Products</h4>
           <ul>
-            <li><a href="/test-series">Test Series</a></li>
-            <li><a href="/quizzes">Live Tests and Quizzes</a></li>
-            <li><a href="/pass">Your Product Pass</a></li>
-            <li><a href="/videos">Online Videos</a></li>
-            <li><a href="/practice">Practice</a></li>
+            <li><a href="/mocks">Test Series</a></li>
+            {/* <li><a href="/quizzes">Live Tests and Quizzes</a></li> */}
+            {/* <li><a href="/pass">Your Product Pass</a></li>
+            <li><a href="/videos">Online Videos</a></li> */}
+            <li><a href="/mocks">Practice</a></li>
+            <li><a href="https://saanvitechs.com/">Know more</a></li>
+
           </ul>
         </div>
 
@@ -62,7 +64,7 @@ const Footer = () => {
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/saanvitechs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>

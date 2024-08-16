@@ -219,7 +219,7 @@ const Login = () => {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       >
         <Alert onClose={handleCloseNotification} severity="success" className="notification-alert">
-          Login successful!
+          Login successful! 
         </Alert>
       </Snackbar>
     </Grid>

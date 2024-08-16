@@ -93,12 +93,13 @@ const axiosWithAuth = () => {
   });
 };
 
-const register = async (firstName, lastName, username, email, password) => {
+const register = async (firstName, lastName, username, email, phoneNumber,password) => {
   try {
     const response = await axios.post(API_URL + 'register', {
       firstName,
       lastName,
       username,
+      phoneNumber,
       email,
       password,
     });
