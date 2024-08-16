@@ -20,6 +20,7 @@ const Login = () => {
       const response = await authService.login(username, password);
       if (response) {
         setError(''); // Clear any existing errors
+        localStorage.setItem('name', username);
         login(response.accessToken); // Pass the token to login context
         navigate('/'); // Redirect to the homepage after successful login
       } else {
