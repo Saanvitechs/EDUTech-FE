@@ -121,7 +121,7 @@ import { Link } from 'react-router-dom';
 import './Mocks.css'; // Include the CSS file for styling
 
 const topics = [
-  { title: 'General Aptitude', content: [{ name: 'Arithmetic Aptitude', path: '/test/1' }, { name: 'Data Interpretation', path: '/test/data-interpretation' }, { name: 'Online Aptitude Test', path: '/test/online-aptitude' }] },
+  { title: 'General Aptitude', content: [{ name: 'Arithmetic Aptitude', path: '/arithmetic-aptitude' }, { name: 'Data Interpretation', path: '/data-interpretation' }, { name: 'Online Aptitude Test', path: '/test/online-aptitude' }] },
   { title: 'Verbal and Reasoning', content: [{ name: 'Verbal Ability', path: '/test/verbal-ability' }, { name: 'Logical Reasoning', path: '/test/logical-reasoning' }, { name: 'Verbal Reasoning', path: '/test/verbal-reasoning' }] },
   { title: 'Interview', content: [{ name: 'Placement Papers', path: '/test/placement-papers' }, { name: 'Group Discussion', path: '/test/group-discussion' }, { name: 'HR Interview', path: '/test/hr-interview' }] },
   { title: 'Engineering', content: [{ name: 'Mechanical Engineering', path: '/test/mechanical-engineering' }, { name: 'Civil Engineering', path: '/test/civil-engineering' }, { name: 'Chemical Engineering', path: '/test/chemical-engineering' }] },

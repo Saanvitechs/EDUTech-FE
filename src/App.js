@@ -13,7 +13,8 @@ import ThankYouPage from './components/ThankYouPage';
 import MembershipPlans from './components/MembershipPlans';
 import ForgotPassword from './components/ForgotPassword';
 import ProtectedRoute from './components/ProtectedRoute';
-
+import ArithmeticAptitude from './components/prepare/ArithmeticAptitude';
+import DataInterpretation from './components/prepare/DataInterpretation';
 function App() {
   return (
     <AuthProvider>
@@ -50,6 +51,8 @@ function App() {
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/membership-plans" element={<MembershipPlans />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/arithmetic-aptitude" element={<ArithmeticAptitude />} />
+          <Route path="/data-interpretation" element={<DataInterpretation />} />
         </Routes>
       </div>
     </AuthProvider>
