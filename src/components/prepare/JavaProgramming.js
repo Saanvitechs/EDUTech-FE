@@ -2,13 +2,13 @@ import React from 'react';
 import './ArithmeticAptitude.css'; // Include CSS for styling
 import Dashboard from './Dashboard.js'; // Reuse the existing dashboard component
 
-const VerbalAbility = () => {
+const JavaProgramming = () => {
   return (
-    <div className="data-interpretation-container">
+    <div className="arithmetic-aptitude-container">
       <Dashboard /> {/* Display the dashboard on the left side */}
       
       <div className="content">
-        <h1>Data</h1>
+        <h1>Java Programming</h1>
         
         <p>Arithmetic aptitude is a key skill that involves basic mathematical operations such as addition, subtraction, multiplication, and division. It is commonly tested in various competitive exams and is an essential skill in everyday life.</p>
         
@@ -42,4 +42,4 @@ const VerbalAbility = () => {
   );
 };
 
-export default VerbalAbility;
+export default JavaProgramming;

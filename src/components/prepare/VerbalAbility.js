@@ -4,11 +4,11 @@ import Dashboard from './Dashboard.js'; // Reuse the existing dashboard componen
 
 const VerbalAbility = () => {
   return (
-    <div className="data-interpretation-container">
+    <div className="arithmetic-aptitude-container">
       <Dashboard /> {/* Display the dashboard on the left side */}
       
       <div className="content">
-        <h1>Data</h1>
+        <h1>VerbalAbility</h1>
         
         <p>Arithmetic aptitude is a key skill that involves basic mathematical operations such as addition, subtraction, multiplication, and division. It is commonly tested in various competitive exams and is an essential skill in everyday life.</p>
         
