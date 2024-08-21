@@ -13,7 +13,7 @@ const CustomNavbar = () => {
 
   // State to manage each dropdown visibility separately
   const [isWhoDropdownOpen, setIsWhoDropdownOpen] = useState(false);
-  const [isTestPrepDropdownOpen, setIsTestPrepDropdownOpen] = useState(false);
+  // const [isTestPrepDropdownOpen, setIsTestPrepDropdownOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
   const handleLogout = () => {
@@ -26,8 +26,8 @@ const CustomNavbar = () => {
   const handleWhoMouseLeave = () => setIsWhoDropdownOpen(false);
 
   // Handlers for "Test your prep" dropdown
-  const handleTestPrepMouseEnter = () => setIsTestPrepDropdownOpen(true);
-  const handleTestPrepMouseLeave = () => setIsTestPrepDropdownOpen(false);
+  // const handleTestPrepMouseEnter = () => setIsTestPrepDropdownOpen(true);
+  // const handleTestPrepMouseLeave = () => setIsTestPrepDropdownOpen(false);
 
   // Handlers for profile dropdown
   const handleProfileMouseEnter = () => setIsProfileDropdownOpen(true);
@@ -54,7 +54,7 @@ const CustomNavbar = () => {
               <NavDropdown.Item as={Link} to="/">For Students</NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown
+            {/* <NavDropdown
               title="Test your prep"
               id="test-prep-dropdown"
               show={isTestPrepDropdownOpen}
@@ -64,7 +64,8 @@ const CustomNavbar = () => {
               <NavDropdown.Item as={Link} to="/mocks">Test 1</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/mocks">Test 2</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/mocks">Test 3</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
+            <Nav.Link as={Link} to="/mocks">Prepare</Nav.Link>
 
             <Nav.Link as={Link} to="/membership-plans">Pricing</Nav.Link>
             <Nav.Link as={Link} to="/resources">Resources</Nav.Link>

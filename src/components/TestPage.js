@@ -6,7 +6,7 @@ const TestPage = () => {
   const { testId } = useParams();
   const navigate = useNavigate();
   const [testContent, setTestContent] = useState(null);
-  const [timeRemaining, setTimeRemaining] = useState(12); // 20 minutes
+  const [timeRemaining, setTimeRemaining] = useState(120); // 20 minutes
   const [responses, setResponses] = useState({});
   const [markedForReview, setMarkedForReview] = useState({});
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
