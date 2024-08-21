@@ -1,0 +1,29 @@
+.dashboard {
+    width: 200px;
+    background-color: #2a2d34; /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .dashboard h2 {
+    color: #ffc107; /* Golden yellow color for the title */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+  
+  .dashboard .topic {
+    background-color: #464a52; /* Dark gray for the buttons */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    cursor: not-allowed; /* Prevent clicking */
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard .topic:hover {
+    background-color: #595d66; /* Slightly lighter on hover */
+  }
+  
