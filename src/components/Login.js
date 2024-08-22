@@ -1,97 +1,53 @@
-// import React, { useState } from 'react';
+// import React, { useState, useContext } from 'react';
+// import { TextField, Button, Card, Typography, Grid, Box, Snackbar, Alert } from '@mui/material';
+// import { useNavigate } from 'react-router-dom';
 // import './Login.css';
+// import { AuthContext } from '../hooks/AuthContext';
 // import authService from '../services/authService';
-// import { useNavigate } from 'react-router-dom';
-// // import logoImage from '../images/logo1.svg'; // Adjust the path as needed
 
 // const Login = () => {
-//   const [email, setEmail] = useState('');
+//   const [usernameOrEmail, setUsernameOrEmail] = useState(''); // Updated variable name
 //   const [password, setPassword] = useState('');
+//   const [error, setError] = useState('');
+//   const [notificationOpen, setNotificationOpen] = useState(false);
 //   const navigate = useNavigate();
 
-//   const handleSubmit = async (e) => {
+//   const { login } = useContext(AuthContext);
+
+//   const handleLogin = async (e) => {
 //     e.preventDefault();
+
 //     try {
-//       await authService.login(email, password);
-//       navigate('/');
+//       const response = await authService.login(usernameOrEmail, password);
+//       if (response) {
+//         setError('');
+//         localStorage.setItem('name', usernameOrEmail); // Store the usernameOrEmail
+//         login(response.accessToken);
+//         setNotificationOpen(true); // Show success notification
+//         setTimeout(() => {
+//           navigate('/'); // Redirect after the notification is shown
+//         }, 2000); // Delays navigation to allow notification to be visible
+//       } else {
+//         setError('Login failed: Invalid credentials');
+//       }
 //     } catch (error) {
-//       console.error("Login failed:", error);
+//       setError('Login failed: ' + error.message);
 //     }
 //   };
 
-//   return (
-//     <div className="login-page">
-//       <div className="login-container">
-//         <div className="login-left">
-//           {/* <img src={logoImage} alt="Logo" className="login-logo" /> */}
-//         </div>
-//         <div className="login-right">
-//           <div className="login-header">
-//             <h2>Log in to your Account</h2>
-//           </div>
-//           <form className="login-form" onSubmit={handleSubmit}>
-//             <div className="input-group">
-//               <label>Email</label>
-//               <input
-//                 type="email"
-//                 value={email}
-//                 onChange={(e) => setEmail(e.target.value)}
-//               />
-//             </div>
-//             <div className="input-group">
-//               <label>Password</label>
-//               <input
-//                 type="password"
-//                 value={password}
-//                 onChange={(e) => setPassword(e.target.value)}
-//               />
-//             </div>
-//             <button type="submit" className="btn">Log in</button>
-//           </form>
-//           <div className="login-footer">
-//             <a href="/forgot-password" className="forgot-password">Forgot Password?</a>
-//             <p className="other-login-options">Other login options</p>
-//             <div className="social-login">
-//               <button className="social-btn google-btn">Google</button>
-//               <button className="social-btn facebook-btn">Facebook</button>
-//               {/* <button className="social-btn apple-btn">Apple</button> */}
-//             </div>
-//             <p className="signup-link">Don't have an account? <a href="/register">Sign up</a></p>
-//             {/* <a href="/organization-login" className="organization-login">Log in with your organization</a> */}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
-
-// import React, { useState } from 'react';
-// import { TextField, Button, Card, Typography, Grid, Box } from '@mui/material';
-// import { useNavigate } from 'react-router-dom';
-// import './Login.css';
-
-// const Login = () => {
-//   const [username, setUsername] = useState('');
-//   const [password, setPassword] = useState('');
-//   const navigate = useNavigate();
-
-//   const handleLogin = (e) => {
-//     e.preventDefault();
-//     // Add your authentication logic here
-//     if (username && password) {
-//       navigate('/home'); // Redirect to the homepage after successful login
-//     } else {
-//       alert('Please fill out both fields.');
-//     }
+//   const handleCloseNotification = () => {
+//     setNotificationOpen(false);
 //   };
 
 //   return (
-//     <Grid container justifyContent="center" alignItems="center" style={{ height: '100vh', backgroundImage: `url(${require('./images/login.svg').default})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+//     <Grid
+//       container
+//       justifyContent="center"
+//       alignItems="center"
+//       style={{ height: '100vh', backgroundImage: `url(${require('./images/login.svg').default})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+//     >
 //       <Grid item xs={12} sm={6} md={4}>
-//         <Card raised style={{ padding: '50px', borderRadius: '20px',  backgroundColor: 'rgba(255, 255, 255, 0.1)', textAlign: 'center' }}>
+//         <Card raised style={{ padding: '50px', borderRadius: '20px', backgroundColor: 'rgba(255, 255, 255, 0.1)', textAlign: 'center' }}>
 //           <Box mb={3}>
 //             <Typography variant="h4" gutterBottom style={{ fontWeight: 'bold', color: '#1565C0' }}>
 //               TestPortal
@@ -102,10 +58,11 @@
 //               <TextField
 //                 fullWidth
 //                 variant="outlined"
-//                 label="Username"
-//                 value={username}
-//                 onChange={(e) => setUsername(e.target.value)}
+//                 label="Username or Email" // Update label to reflect either username or email
+//                 value={usernameOrEmail}
+//                 onChange={(e) => setUsernameOrEmail(e.target.value)}
 //                 style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+//                 error={!!error}
 //               />
 //               <TextField
 //                 fullWidth
@@ -115,8 +72,14 @@
 //                 value={password}
 //                 onChange={(e) => setPassword(e.target.value)}
 //                 style={{ backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+//                 error={!!error}
 //               />
 //             </Box>
+//             {error && (
+//               <Typography variant="body2" color="error" style={{ marginBottom: '15px' }}>
+//                 {error}
+//               </Typography>
+//             )}
 //             <Button
 //               type="submit"
 //               fullWidth
@@ -131,11 +94,22 @@
 //               <a href="/register" style={{ color: '#1565C0', textDecoration: 'none' }}>Create Account</a>
 //             </Typography>
 //             <Typography variant="body2" style={{ color: '#1565C0' }}>
-//               <a href="https://saanvitechs.com/contact.php" style={{ color: '#1565C0', textDecoration: 'none' }}>Need Help?</a>
+//               <a href="/forgot-password" style={{ color: '#1565C0', textDecoration: 'none' }}>Forgot Password?</a>
 //             </Typography>
 //           </Box>
 //         </Card>
 //       </Grid>
+
+//       <Snackbar
+//         open={notificationOpen}
+//         autoHideDuration={3000}
+//         onClose={handleCloseNotification}
+//         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+//       >
+//         <Alert onClose={handleCloseNotification} severity="success" className="notification-alert">
+//           Login successful!
+//         </Alert>
+//       </Snackbar>
 //     </Grid>
 //   );
 // };
@@ -143,17 +117,24 @@
 // export default Login;
 
 
-import React, { useState } from 'react';
-import { TextField, Button, Card, Typography, Grid, Box } from '@mui/material';
+//-------
+
+import React, { useState, useContext } from 'react';
+import { TextField, Button, Card, Typography, Grid, Box, Snackbar, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
+import { AuthContext } from '../hooks/AuthContext';
 import authService from '../services/authService';
 import './Login.css';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [usernameOrEmail, setUsernameOrEmail] = useState(''); // Updated variable name
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [notificationOpen, setNotificationOpen] = useState(false);
   const navigate = useNavigate();
+
+  const { login } = useContext(AuthContext);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -165,12 +146,26 @@ const Login = () => {
     }
 
     try {
-      // Call the login function from the authService
-      await authService.login(username, password);
-      navigate('/home'); // Redirect to the homepage after successful login
-    } catch (err) {
-      setError('Invalid username or password. Please try again.');
+      const response = await authService.login(usernameOrEmail, password);
+      if (response) {
+        setError('');
+        localStorage.setItem('token', response.accessToken); // Store the token in localStorage
+        localStorage.setItem('name', usernameOrEmail); // Store the usernameOrEmail in localStorage
+        login(response.accessToken);
+        setNotificationOpen(true); // Show success notification
+        setTimeout(() => {
+          navigate('/'); // Redirect after the notification is shown
+        }, 2000); // Delays navigation to allow notification to be visible
+      } else {
+        setError('Login failed: Invalid credentials');
+      }
+    } catch (error) {
+      setError('Login failed: ' + error.message);
     }
+  };
+
+  const handleCloseNotification = () => {
+    setNotificationOpen(false); 
   };
 
   return (
@@ -210,6 +205,11 @@ const Login = () => {
               <TextField
                 fullWidth
                 variant="outlined"
+                label="Username or Email" // Update label to reflect either username or email
+                value={usernameOrEmail}
+                onChange={(e) => setUsernameOrEmail(e.target.value)}
+                style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+                error={!!error}
                 label="Username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
@@ -260,6 +260,17 @@ const Login = () => {
           </Box>
         </Card>
       </Grid>
+
+      <Snackbar
+        open={notificationOpen}
+        autoHideDuration={3000}
+        onClose={handleCloseNotification}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+      >
+        <Alert onClose={handleCloseNotification} severity="success" className="notification-alert">
+          Login successful! 
+        </Alert>
+      </Snackbar>
     </Grid>
   );
 };

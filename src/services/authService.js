@@ -1,46 +1,28 @@
-
-// import axios from 'axios';
-
-// const API_URL = 'http://localhost:8080/api/auth';
-
-// const login = async (email, password) => {
-//   const response = await axios.post(`${API_URL}/login`, { email, password });
-//   localStorage.setItem('user', JSON.stringify(response.data));
-// };
-
-// const register = async (name, email, password) => {
-//   await axios.post(`${API_URL}/register`, { name, email, password });
-// };
-
-// const logout = () => {
-//   localStorage.removeItem('user');
-// };
-
-// const authService = {
-//   login,
-//   register,
-//   logout,
-// };
-
-// export default authService;
-
-
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/auth/';
+const API_URL = 'http://localhost:8080/api/auth/';
 
-const register = async (firstName, lastName, username, email, password) => {
+const axiosWithAuth = () => {
+  const token = localStorage.getItem('token');
+  return axios.create({
+    baseURL: API_URL,
+    headers: {
+      Authorization: token ? `Bearer ${token}` : '', // Ensure token is prefixed with Bearer
+    },
+  });
+};
+
+
+const register = async (userData) => {
   try {
-    const response = await axios.post(API_URL + 'register', {
-      firstName,
-      lastName,
-      username,
-      email,
-      password,
+    const response = await axios.post(API_URL + 'signup', userData, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
     return response.data;
   } catch (error) {
-    console.error('Registration failed:', error);
+    console.error('Registration failed:', error.response?.data || error.message);
     throw error;
   }
 };
@@ -66,14 +48,48 @@ const logout = () => {
 };
 
 const getCurrentUser = () => {
-  return JSON.parse(localStorage.getItem('user'));
+  return localStorage.getItem('token');
+};
+
+const fetchProtectedData = async () => {
+  try {
+    const response = await axiosWithAuth().get('/protected-route');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching protected data:', error);
+    throw error;
+  }
+};
+
+const forgotPassword = async (email) => {
+  try {
+    const response = await axios.post(`${API_URL}forgot-password`, { email });
+    return response.data;
+  } catch (error) {
+    console.error('Error requesting OTP:', error.response?.data || error.message);
+    throw error;
+  }
+};
+
+const resetPassword = async (email, newPassword, otp) => {
+  try {
+    const response = await axios.post(`${API_URL}reset-password`, { email, newPassword, otp });
+    return response.data;
+  } catch (error) {
+    console.error('Error resetting password:', error.response?.data || error.message);
+    throw error;
+  }
 };
 
 const authService = {
+  axiosWithAuth,
   register,
   login,
   logout,
   getCurrentUser,
+  fetchProtectedData,
+  forgotPassword,
+  resetPassword,
 };
 
 export default authService;
