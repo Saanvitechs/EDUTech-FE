@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Card, CardContent, Typography, Button, Box } from '@mui/material';
 import Dashboard from './Dashboard'; // Reuse the existing dashboard component
 
-const HrInterview = () => {
+const SoftwareTesting = () => {
   return (
     <div style={{ display: 'flex', height: '100vh', marginTop: '50px' }}>
       <Dashboard /> {/* Display the dashboard on the left side */}
@@ -11,7 +11,7 @@ const HrInterview = () => {
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <Typography variant="h3" gutterBottom>
-            HR Interview
+            Software Testing
             </Typography>
           </Grid>
 
@@ -86,4 +86,4 @@ const HrInterview = () => {
   );
 };
 
-export default HrInterview;
+export default SoftwareTesting;

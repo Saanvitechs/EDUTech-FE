@@ -5,18 +5,18 @@ import './ArithmeticAptitude.css'; // Include CSS for styling
 
 const topics = [
   {
-    title: 'Online Logical Tests',
+    title: 'Logical & Reasoning Tests',
     subtopics: [
-      '1. Numbers',
-      '2. Percentage',
-      '3. Profit and Loss',
-      '4. Average',
-      '5. Ratio and Proportion',
-      '6. Mixture and Alligation',
-      '7. Time and Work',
-      '8. Time Speed Distance',
-      '9. Pipes and Cisterns',
-      '10. Algebra'
+      '1. Alphanumeric series',
+      '2. Reasoning Analogies',
+      '3. Blood Relations',
+      '4. Cause and Effect',
+      '5. Calendar',
+      '6. Logical Problem',
+      '7. Letter and Symbol Series',
+      '8. Statement and Assumption',
+      '9. Statement and Argument',
+      '10. Theme Detection'
     ]
   },
   // Add more topics and subtopics as needed

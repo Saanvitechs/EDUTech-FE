@@ -27,6 +27,11 @@ import JavaProgramming from './components/prepare/JavaProgramming';
 import TestPage from './components/prepare/TestPage';
 import AptitudeTest from './components/AptitudeTest';
 import LogicalTest from './components/prepare/LogicalTest';
+import Networking from './components/prepare/Networking';
+import Database from './components/prepare/Database';
+import OperatingSystem from './components/prepare/OperatingSystem';
+import SoftwareTesting from './components/prepare/SoftwareTesting';
+import Sql from './components/prepare/Sql';
 function App() {
   return (
     <AuthProvider>
@@ -75,6 +80,11 @@ function App() {
           <Route path="/test-page" element={<TestPage />} />
           <Route path="/aptitude-test-page/:id" element={<AptitudeTest />} />
           <Route path="/logical-test" element={<LogicalTest />} />
+          <Route path="/networking" element={<Networking />} />
+          <Route path="/database" element={<Database />} />
+          <Route path="/operating-system" element={<OperatingSystem />} />
+          <Route path="/software-testing" element={<SoftwareTesting />} />
+          <Route path="/my-sql" element={<Sql />} />
         </Routes>
       </div>
     </AuthProvider>

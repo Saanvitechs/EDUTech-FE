@@ -5,7 +5,7 @@ import './ArithmeticAptitude.css'; // Include CSS for styling
 
 const topics = [
   {
-    title: 'Online Aptitude Tests',
+    title: 'Aptitude Tests',
     subtopics: [
       '1. Numbers',
       '2. Percentage',
