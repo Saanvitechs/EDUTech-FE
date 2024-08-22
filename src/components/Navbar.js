@@ -37,7 +37,7 @@ const CustomNavbar = () => {
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="custom-navbar">
       <Container>
         <Navbar.Brand as={Link} to="/" className="navbar-logo">
-          Testportal
+          TREx
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

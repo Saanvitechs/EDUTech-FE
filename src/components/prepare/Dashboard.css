@@ -2,6 +2,7 @@
     width: 200px;
     background-color: #2a2d34; /* Dark background */
     padding: 20px;
+    /* margin-top: 60px; */
     border-radius: 10px;
   }
   
@@ -13,7 +14,7 @@
   }
   
   .dashboard .topic {
-    background-color: #464a52; /* Dark gray for the buttons */
+    background-color: #f3f04f; /* Dark gray for the buttons */
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
