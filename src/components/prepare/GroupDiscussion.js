@@ -6,6 +6,9 @@ const GroupDiscussion = () => {
   return (
     <div style={{ display: 'flex', height: '100vh', marginTop: '50px' }}>
       <Dashboard /> {/* Display the dashboard on the left side */}
+      <div style={{ display: 'flex', height: '100vh', marginTop: '50px' }}>
+      <div style={{ display: 'flex' }}>
+        <div style={{ width: '30%' }}></div>
 
       <div style={{ flexGrow: 1, padding: '40px', backgroundColor: '#f5f5f5', overflowY: 'auto' }}>
         <Grid container spacing={4}>
@@ -82,6 +85,8 @@ const GroupDiscussion = () => {
           </Grid>
         </Grid>
       </div>
+    </div>
+    </div>
     </div>
   );
 };

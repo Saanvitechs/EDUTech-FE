@@ -5,6 +5,7 @@ import { AuthContext } from '../hooks/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
+import logo from './images/trex_logo.png';
 
 const CustomNavbar = () => {
   const { isAuthenticated, logout } = useContext(AuthContext);
@@ -37,6 +38,13 @@ const CustomNavbar = () => {
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="custom-navbar">
       <Container>
         <Navbar.Brand as={Link} to="/" className="navbar-logo">
+        <img
+            src={logo}
+            width="40"
+            height="40"
+            className="d-inline-block align-top"
+            alt="Logo"
+          />
           TREx
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

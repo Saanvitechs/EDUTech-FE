@@ -200,3 +200,12 @@
   font-weight: bold;
   margin-right: 30px;
 }
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  margin-right: 10px;
+}
+
