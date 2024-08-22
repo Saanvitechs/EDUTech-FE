@@ -34,7 +34,6 @@ const Mocks = () => {
           ))}
         </div>
       </div>
-    
   );
 };
 
