@@ -1,142 +1,4 @@
-/* .mocks-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  h1 {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .mock-tests-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .mock-test-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 15px;
-    width: 260px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .mock-test-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .mock-test-card.locked {
-    border: 2px solid #ff4c4c;
-  }
-  
-  .mock-test-card.unlocked {
-    border: 2px solid #4caf50;
-  }
-  
-  .mock-test-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .mock-test-btn:hover {
-    background-color: #0056b3;
-  }
-  
-
 /* 
-   .mocks-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  h1 {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .mock-tests-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .mock-test-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 15px;
-    width: 260px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .mock-test-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .mock-test-card.locked {
-    border: 2px solid #ff4c4c;
-  }
-  
-  .mock-test-card.unlocked {
-    border: 2px solid #4caf50;
-  }
-  
-  .mock-test-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .mock-test-btn:hover {
-    background-color: #0056b3;
-  }
-  
- 
-  .information-blocks {
-    margin-top: 20px;
-  }
-  
-  .info-block {
-    background: #f4f4f4;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  .info-block h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #007bff;
-  }
-  
-  .info-block p {
-    font-size: 14px;
-    color: #555;
-  }
-   */ 
-
    .mocks-container {
     display: flex;
     min-height: 100vh;
@@ -234,6 +96,79 @@
     text-decoration: underline;
   }
   
+  
+  .topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+   */
+
+
+   .mocks-container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 30px;
+    align-items: center;
+    width: 100%;
+
+  }
+  
+  .content {
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    min-height: 100vh; /* Ensures that content takes up the full height of the viewport */
+  }
+  
+  .mock-tests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .topic-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .topic-card h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  
+  .topic-card ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .topic-card li {
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .topic-card ul li a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  
+  .topic-card ul li a:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
   
   .topic-card:hover {
     transform: translateY(-5px);
