@@ -1,14 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Slider from 'react-slick';
+// import Slider from 'react-slick';
 import TestSeriesSection from './TestSeriesSection';
 import ProgramSection from './ProgramSection';
 import './Home.css';
 import './WhyPregradSection.css';
 import Footer from './Footer';
 import './Footer.js';
-import leftArrowIcon from './images/Down.png'; // Replace with your actual path
-import rightArrowIcon from './images/Up.png'; // Replace with your actual path
+// import leftArrowIcon from './images/Down.png'; 
+// import rightArrowIcon from './images/Up.png'; 
 import hero from './images/hero.svg'; // Ensure this path is correct
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,15 +29,15 @@ const Home = () => {
   //   { id: 4, name: "Mock Test 4", description: "Description for Mock Test 4", locked: false },
   // ];
 
-  const sliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <img src={rightArrowIcon} alt="Next" className="arrow next" />,
-    prevArrow: <img src={leftArrowIcon} alt="Previous" className="arrow prev" />
-  };
+  // const sliderSettings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   nextArrow: <img src={rightArrowIcon} alt="Next" className="arrow next" />,
+  //   prevArrow: <img src={leftArrowIcon} alt="Previous" className="arrow prev" />
+  // };
 
   return (
     <div className="home-container">
