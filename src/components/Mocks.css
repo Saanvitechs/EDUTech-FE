@@ -1,14 +1,10 @@
-
-
-   .mocks-container {
+  .mocks-container {
     display: flex;
     justify-content: center;
-    min-height: 700px;
+    min-height: 100vh;
     padding: 30px;
     align-items: center;
     width: 100%;
-    max-width: 100%;
-
   }
   
   .content {

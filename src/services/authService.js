@@ -27,10 +27,10 @@ const register = async (userData) => {
   }
 };
 
-const login = async (username, password) => {
+const login = async (usernameOrEmail, password) => {
   try {
     const response = await axios.post(API_URL + 'login', {
-      username,
+      usernameOrEmail,
       password,
     });
 
